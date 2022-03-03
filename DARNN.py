@@ -26,7 +26,7 @@ class DARNN(nn.Module):
     
     def forward(self, x):
         syms = x[:,0,0].long()
-        emb = self.emb(syms).unsqueeze(0) # 1 x bs x m
+        emb = self.emb(syms).unsqueeze(0) # 1 x bs x m  bs is batch size 
         
         bs = x.size(0)
         x = x[:,:,1:] # bs x T x n
