@@ -1,6 +1,12 @@
 class DARNN(nn.Module):
     """Implementation of https://arxiv.org/pdf/1704.02971.pdf"""
-    def __init__(self, T, n, m, p, out_len):
+    """
+    n- sequence number
+    T- sequence length
+    bs- batch size
+    m - size of the hidden state ECONDER  .decoder (p), 
+    """
+    def __init__(self, T, n, m, p, out_len):     
         super().__init__()
         self.T = T
         self.n = n
